@@ -60,6 +60,11 @@ npm run deploy
 - 确保 `shenmeyun.github.io` 仓库已创建
 - 在 GitHub Pages 设置中选择 `master` 分支作为 Source
 
+## 由 JetBrains 支持的项目
+非常感谢 JetBrains 向我提供了执照，可以从事该项目和其他开源项目。
+
+[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/liangguifeng)
+
 ## License
 
 MIT License
