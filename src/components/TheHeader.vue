@@ -91,16 +91,19 @@ watch(currentLang, (newLang) => {
   left: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  /* 启用硬件加速 */
+  will-change: background-color, box-shadow;
+  transform: translateZ(0);
 }
 
 /* 所有页面使用深色背景，与整体风格统一 */
 .header-dark {
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(20px);
+  background: rgba(15, 23, 42, 0.95);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -263,18 +266,19 @@ watch(currentLang, (newLang) => {
     left: 0;
     right: 0;
     background: rgba(15, 23, 42, 0.98);
-    backdrop-filter: blur(20px);
+    /* 移除 backdrop-filter 以提升性能 */
     flex-direction: column;
     padding: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-100%);
+    transform: translate3d(0, -100%, 0);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    will-change: transform, opacity;
   }
 
   .nav.active {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
     visibility: visible;
   }

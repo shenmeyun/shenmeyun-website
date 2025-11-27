@@ -244,7 +244,7 @@ const handleSubmit = () => {
   width: 100%;
   padding: 14px 18px;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   font-size: 16px;
@@ -328,7 +328,7 @@ textarea {
   align-items: flex-start;
   padding: 20px;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 15px;

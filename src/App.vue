@@ -21,11 +21,13 @@ import TheFooter from '@/components/TheFooter.vue'
 }
 
 html {
-  scroll-behavior: smooth;
+  /* 移除 scroll-behavior: smooth 以提升滚动性能 */
   /* 优化滚动性能 */
   -webkit-overflow-scrolling: touch;
   /* 启用硬件加速 */
   transform: translateZ(0);
+  /* 优化滚动性能 */
+  overscroll-behavior: contain;
 }
 
 body {
@@ -37,6 +39,10 @@ body {
   color: #1f2937;
   line-height: 1.6;
   background: #0f172a;
+  /* 优化滚动性能 */
+  overflow-x: hidden;
+  /* 启用硬件加速 */
+  transform: translateZ(0);
 }
 
 #app {
@@ -47,6 +53,10 @@ body {
 
 main {
   flex: 1;
+  /* 优化滚动性能 */
+  contain: layout style;
+  /* 启用硬件加速 */
+  transform: translateZ(0);
 }
 
 a {

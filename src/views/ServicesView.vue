@@ -182,7 +182,7 @@ const getServiceFeatures = (index) => {
 
 .service-card {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -347,7 +347,7 @@ const getServiceFeatures = (index) => {
 
 .reason-item {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   padding: 40px 30px;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);

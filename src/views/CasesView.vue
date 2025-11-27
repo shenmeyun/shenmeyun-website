@@ -133,7 +133,7 @@ const getCaseIcon = (index) => {
 
 .case-card {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);

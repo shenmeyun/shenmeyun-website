@@ -13,8 +13,8 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-// 减少粒子数量从50到30，提升性能
-const PARTICLE_COUNT = 30
+// 减少粒子数量从50到20，进一步提升滚动性能
+const PARTICLE_COUNT = 20
 const particles = ref([])
 
 // 预计算粒子样式，避免每次渲染都重新计算
@@ -56,6 +56,11 @@ onMounted(() => {
   bottom: 0;
   overflow: hidden;
   z-index: 0;
+  /* 使用 CSS containment 优化滚动性能 */
+  contain: layout style paint;
+  /* 启用硬件加速 */
+  will-change: contents;
+  transform: translateZ(0);
 }
 
 .grid-pattern {
@@ -71,6 +76,10 @@ onMounted(() => {
   will-change: transform;
   transform: translateZ(0);
   animation: gridMove 20s linear infinite;
+  /* 使用 CSS containment 优化 */
+  contain: layout style paint;
+  /* 降低动画优先级 */
+  animation-play-state: running;
 }
 
 @keyframes gridMove {
@@ -85,11 +94,14 @@ onMounted(() => {
 .gradient-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.3;
+  /* 减少模糊半径以提升性能 */
+  filter: blur(60px);
+  opacity: 0.25;
   will-change: transform;
   transform: translateZ(0);
   animation: float 20s ease-in-out infinite;
+  /* 使用 CSS containment 优化 */
+  contain: layout style paint;
 }
 
 .orb-1 {

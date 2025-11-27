@@ -282,8 +282,8 @@ const { currentLang, t } = useI18n()
   gap: 15px;
   margin-bottom: 20px;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s;

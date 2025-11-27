@@ -196,7 +196,7 @@ const values = computed(() => [
 
 .card {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   padding: 50px 40px;
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
@@ -317,7 +317,7 @@ const values = computed(() => [
   text-align: center;
   padding: 40px 30px;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   border-radius: 16px;
   transition: all 0.3s;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -414,7 +414,7 @@ const values = computed(() => [
   padding-left: 30px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s;
@@ -469,7 +469,7 @@ const values = computed(() => [
 
 .team-card {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   padding: 40px;
   border-radius: 20px;
   text-align: center;

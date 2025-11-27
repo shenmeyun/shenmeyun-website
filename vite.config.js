@@ -59,4 +59,13 @@ export default defineConfig({
   optimizeDeps: {
     include: ['vue', 'vue-router'],
   },
+  // 开发服务器配置
+  server: {
+    // 自动打开浏览器
+    open: true,
+    // 端口号（默认 5173）
+    port: 5173,
+    // 主机地址
+    host: true,
+  },
 })

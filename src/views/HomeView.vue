@@ -276,7 +276,7 @@ onMounted(() => {
   display: inline-block;
   padding: 8px 20px;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50px;
   margin-bottom: 30px;
@@ -348,7 +348,7 @@ onMounted(() => {
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   color: white;
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
@@ -500,11 +500,13 @@ onMounted(() => {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
+  /* 优化滚动性能 */
+  contain: layout style;
 }
 
 .feature-card {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   padding: 40px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -602,11 +604,13 @@ onMounted(() => {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
+  /* 优化滚动性能 */
+  contain: layout style;
 }
 
 .advantage-card {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   padding: 40px 30px;
   border-radius: 16px;
   text-align: center;
@@ -725,11 +729,13 @@ onMounted(() => {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
+  /* 优化滚动性能 */
+  contain: layout style;
 }
 
 .tech-category {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* 移除 backdrop-filter 以提升滚动性能 */
   padding: 30px;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
