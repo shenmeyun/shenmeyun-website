@@ -5,6 +5,10 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // GitHub Pages 部署配置
+  // 从环境变量读取 base 路径，如果没有设置则默认为 '/'
+  // 可以在 .env 文件中设置 BASE_URL 来覆盖
+  base: process.env.BASE_URL || '/',
   plugins: [
     vue(),
   ],
