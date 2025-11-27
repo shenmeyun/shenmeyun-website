@@ -1,0 +1,18 @@
+<svg width="32" height="32" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 主云朵（居中调整） -->
+  <path d="M 45 120 Q 35 110, 35 100 Q 35 85, 50 85 Q 55 70, 70 70 Q 80 55, 100 55 Q 120 55, 130 70 Q 145 70, 150 85 Q 165 85, 165 100 Q 165 110, 155 120 L 45 120 Z" 
+        fill="url(#iconGradient)"/>
+  
+  <!-- 装饰云朵（小，居中调整） -->
+  <ellipse cx="70" cy="105" rx="15" ry="12" fill="url(#iconGradient)" opacity="0.6"/>
+  <ellipse cx="140" cy="105" rx="15" ry="12" fill="url(#iconGradient)" opacity="0.6"/>
+</svg>
+

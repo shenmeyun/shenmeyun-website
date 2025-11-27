@@ -10,7 +10,7 @@
           </h3>
           <div class="about-content">
             <div class="footer-logo">
-              <span class="logo-icon">☁️</span>
+              <img src="/logo.svg" alt="什么云科技" class="logo-icon" />
               <span class="logo-text">{{ t('nav.home') === '首页' ? '什么云科技' : 'ShenMeYun Tech' }}</span>
             </div>
             <p class="footer-description">
@@ -98,7 +98,7 @@
         </p>
         <p class="beian">
           <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer" class="beian-link">
-            琼ICP备2024048013号-1
+            琼ICP备2024048013号-2
           </a>
         </p>
       </div>
@@ -172,7 +172,10 @@ const { currentLang, t } = useI18n()
 }
 
 .logo-icon {
-  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  flex-shrink: 0;
   filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
 }
 

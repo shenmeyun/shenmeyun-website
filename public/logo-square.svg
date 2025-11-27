@@ -1,0 +1,65 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 渐变定义 -->
+    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 发光效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 方形背景（圆角） -->
+  <rect x="0" y="0" width="200" height="200" rx="20" ry="20" fill="url(#bgGradient)"/>
+  
+  <!-- 主云朵（居中调整） -->
+  <path d="M 45 120 Q 35 110, 35 100 Q 35 85, 50 85 Q 55 70, 70 70 Q 80 55, 100 55 Q 120 55, 130 70 Q 145 70, 150 85 Q 165 85, 165 100 Q 165 110, 155 120 L 45 120 Z" 
+        fill="url(#cloudGradient)" 
+        filter="url(#glow)"
+        opacity="0.9"/>
+  
+  <!-- 装饰云朵（小，居中调整） -->
+  <ellipse cx="70" cy="105" rx="15" ry="12" fill="url(#cloudGradient)" opacity="0.6"/>
+  <ellipse cx="140" cy="105" rx="15" ry="12" fill="url(#cloudGradient)" opacity="0.6"/>
+  
+  <!-- 文字：什么云 -->
+  <text x="100" y="145" 
+        font-family="Arial, sans-serif" 
+        font-size="24" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="url(#textGradient)">
+    什么云
+  </text>
+  
+  <!-- 英文文字：ShenMeYun -->
+  <text x="100" y="165" 
+        font-family="Arial, sans-serif" 
+        font-size="12" 
+        font-weight="normal" 
+        text-anchor="middle" 
+        fill="#ffffff" 
+        opacity="0.8">
+    ShenMeYun
+  </text>
+</svg>
+

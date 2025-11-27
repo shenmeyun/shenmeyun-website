@@ -3,7 +3,7 @@
     <div class="container">
       <div class="header-content">
         <div class="logo" @click="$router.push('/')">
-          <span class="logo-icon">☁️</span>
+          <img src="/logo-icon.svg" alt="什么云科技" class="logo-icon" />
           <span class="logo-text">{{ t('nav.home') === '首页' ? '什么云科技' : 'ShenMeYun Tech' }}</span>
         </div>
         <nav class="nav" :class="{ active: mobileMenuOpen }">
@@ -169,7 +169,10 @@ watch(currentLang, (newLang) => {
 }
 
 .logo-icon {
-  font-size: 28px;
+  width: 32px;
+  height: 32px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .nav {
